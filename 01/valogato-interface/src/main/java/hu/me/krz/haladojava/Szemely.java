@@ -1,24 +1,24 @@
 package hu.me.krz.haladojava;
 
 public class Szemely {
-	private String name;
-	private int age;
+	private String nev;
+	private int eletkor;
 
-	public Szemely(String name, int age) {
-		this.name = name;
-		this.age = age;
+	public Szemely(String nev, int eletkor) {
+		this.nev = nev;
+		this.eletkor = eletkor;
 	}
 
-	public String getName() {
-		return name;
+	public String getNev() {
+		return nev;
 	}
 
-	public int getAge() {
-		return age;
+	public int getEletkor() {
+		return eletkor;
 	}
 
 	@Override
 	public String toString() {
-		return "Személy: név " + name + ", életkor " + age;
+		return "Személy: név " + nev + ", életkor " + eletkor + ".";
 	}
 }
