@@ -1,0 +1,18 @@
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+import org.junit.jupiter.api.Test;
+
+class NeptunCodeGeneratorTest {
+
+    @Test
+    void test() {
+        NeptunCodeGenerator neptunCodeGenerator = new NeptunCodeGenerator();
+
+        int nextCounter = neptunCodeGenerator.getNextCounter();
+        int nextCounter1 = neptunCodeGenerator.getNextCounter();
+        assertEquals(nextCounter,1);
+        assertEquals(nextCounter1,2);
+    }
+
+}

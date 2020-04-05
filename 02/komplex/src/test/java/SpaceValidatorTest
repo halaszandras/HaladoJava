@@ -1,0 +1,29 @@
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+
+class SpaceValidatorTest {
+    SpaceValidator spaceValidator = new SpaceValidator();
+
+    @Test
+    void testWithoutSpace() {
+        //mock
+        User user = mock(User.class);
+        //when
+        when(user.getName()).thenReturn("ValidAF");
+        //assert
+        assertEquals(spaceValidator.isValid(user), true);
+    }
+    @Test
+    void testWithSpace() {
+        //mock
+        User user = mock(User.class);
+        //when
+        when(user.getName()).thenReturn("Valid A F");
+        //assert
+        assertEquals(spaceValidator.isValid(user), false);
+    }
+
+}

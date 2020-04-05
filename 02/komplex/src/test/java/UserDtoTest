@@ -1,0 +1,36 @@
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+
+class UserDtoTest {
+
+    @Test
+    void TestUserDto() {
+        //mock
+        String randomDto= "randomDto";
+        UserDto userDto = new UserDto(randomDto);
+        //assert
+        assertEquals(userDto.getName(),"randomDto");
+    }
+
+    @Test
+    void TestGetName() {
+        //mock
+        UserDto userDto = mock(UserDto.class);
+        //when
+        when(userDto.getName()).thenReturn("randomDto");
+        //assert
+        assertEquals(userDto.getName(), "randomDto");
+    }
+
+    @Test
+    void TestSetName() {
+        UserDto userDto = new UserDto("randomDto");
+        String newDto = "newDto";
+        userDto.setName(newDto);
+        //assert
+        assertEquals(userDto.getName(), "newDto");
+    }
+}

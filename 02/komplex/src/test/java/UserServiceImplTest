@@ -1,0 +1,32 @@
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+class UserServiceImplTest {
+    UserModify userModify = mock(UserModify.class);
+    Validator validator = mock (Validator.class);
+    List<Validator> validatorList = new ArrayList<>();
+    User user = mock(User.class);
+
+    @Test
+    void TestSave() {
+        //mock
+        SpaceValidator spaceValidator = mock(SpaceValidator.class);
+        LengthValidator lengthValidator = mock(LengthValidator.class);
+        validatorList.add(spaceValidator);
+        validatorList.add(lengthValidator);
+        User user = mock(User.class);
+        UserServiceImpl userServiceImpl = new UserServiceImpl(userModify, validatorList);
+        userModify.save(user);
+        userServiceImpl.save(user);
+        //verify
+        verify(userModify, times(1)).save(user);
+    }
+}
