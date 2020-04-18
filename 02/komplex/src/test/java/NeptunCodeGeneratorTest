@@ -14,5 +14,14 @@ class NeptunCodeGeneratorTest {
         assertEquals(nextCounter,1);
         assertEquals(nextCounter1,2);
     }
+    @Test
+    void testGetNextCounter() {
+
+        NeptunCodeGenerator neptunCodeGenerator = new NeptunCodeGenerator();
+
+        assertEquals(neptunCodeGenerator.getNextCounter(), 0);
+//	assertEquals(neptunCodeGenerator.getNextCounter(), 1);
+
+    }
 
 }
