@@ -1,17 +1,15 @@
-import sun.security.krb5.internal.ccache.CredentialsCache;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Komplex {
 
     public static void main(String[] args) {
-        UseRepository useRepository = new UseRepository();
+        UserRepository userRepository = new UserRepository();
         List<Validator> validators = new ArrayList<>();
         validators.add(new LengthValidator());
         validators.add(new SpaceValidator());
         UserService userService = new UserServiceImpl(
-                useRepository, validators
+                userRepository, validators
         );
 
         UserController userController = new UserController(

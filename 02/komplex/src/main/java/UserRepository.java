@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class UseRepository implements UserModify {
+public class UserRepository implements UserModify {
     private List<User> users = new ArrayList<>();
     public void save(User user) {
         System.out.printf("%s mentve%n", user.getName());
         users.add(user);
     }
-    public User getByNektunKod(String neptunkod) {
+    public User getByNeptunKod(String neptunkod) {
         for (User user : users) {
             if (user.getNeptunkod().equals(neptunkod)) {
                 return user;

@@ -1,12 +1,12 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.Test;
 
 class UserTest {
 
     @Test
-    void testGetName() {
+    void getNameTest() {
         //mock
         User user = mock(User.class);
         //when
@@ -16,7 +16,7 @@ class UserTest {
     }
 
     @Test
-    void testIsEnabled() {
+    void isEnabledTest() {
         //mock
         User user = mock(User.class);
         //when
@@ -26,7 +26,7 @@ class UserTest {
     }
 
     @Test
-    void testGetNeptunkod() {
+    void getNeptunkodTest() {
         //mock
         User user = mock(User.class);
         //when

@@ -4,7 +4,7 @@ import static org.mockito.Mockito.*;
 
 import org.junit.jupiter.api.Test;
 
-class UseRepositoryTest {
+class UserRepositoryTest {
     UserRepository userRepository = new UserRepository();
 
     @Test

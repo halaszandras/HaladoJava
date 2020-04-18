@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class NeptunCodeGeneratorTest {
 
     @Test
-    void test() {
+    void neptunCodeGeneratorTest() {
         NeptunCodeGenerator neptunCodeGenerator = new NeptunCodeGenerator();
 
         int nextCounter = neptunCodeGenerator.getNextCounter();

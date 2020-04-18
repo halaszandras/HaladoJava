@@ -8,7 +8,7 @@ class SpaceValidatorTest {
     SpaceValidator spaceValidator = new SpaceValidator();
 
     @Test
-    void testWithoutSpace() {
+    void withoutSpaceTest() {
         //mock
         User user = mock(User.class);
         //when
@@ -17,7 +17,7 @@ class SpaceValidatorTest {
         assertEquals(spaceValidator.isValid(user), true);
     }
     @Test
-    void testWithSpace() {
+    void withSpaceTest() {
         //mock
         User user = mock(User.class);
         //when
